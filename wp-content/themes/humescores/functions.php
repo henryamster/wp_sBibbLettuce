@@ -45,7 +45,7 @@ if (!function_exists('humescores_setup')) :
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus(array(
-            'primary' => esc_html__('Primary', 'humescores'),
+            'primary' => esc_html__('Header', 'humescores'),
         ));
 
         /*
@@ -65,6 +65,12 @@ if (!function_exists('humescores_setup')) :
             'default-color' => 'ffffff',
             'default-image' => '',
         )));
+        
+        add_theme_support('custom-logo',array(
+            'width'=> 90,
+            'height' => 90,
+            'flex-width'=>true,
+        ));
     }
 
 endif;

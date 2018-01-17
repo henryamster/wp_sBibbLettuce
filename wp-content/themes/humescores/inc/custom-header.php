@@ -9,7 +9,7 @@
 		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
 	</a>
 	<?php endif; // End header image check. ?>
- *
+ /*
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
  * @package Humescores
@@ -23,9 +23,9 @@
 function humescores_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'humescores_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'default-text-color'     => 'ffffff',
+		'width'                  => 2000,
+		'height'                 => 450,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'humescores_header_style',
 	) ) );
