@@ -1,7 +1,7 @@
 .main-navigation {
 	display: block;
 	
-	font-family: $font__bb;
+	font-family: $font__aa;
 	font-weight: 400;
 	clear: left;
 	
@@ -98,10 +98,12 @@ button.dropdown-toggle {
 }
 
 /* Toggle small menu and sub-menus on */
-.toggled-on ul,
-.sub-menu.toggled-on {
+.toggled-on ul, 
+ul.children.toggled-on,
+.sub-menu.toggled-on{
 	display: block;
 }
+
 
 @media screen and (min-width: $query__small) {
 	.menu-toggle {

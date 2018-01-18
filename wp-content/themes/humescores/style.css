@@ -443,36 +443,31 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
+	border: 0px solid;
 	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, 0.8);
+	/*	border-radius: 3px;*/
+	background: transparent;
+	/*	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);*/
+	color: #000;
 	font-size: 15px;
 	font-size: 0.75 1.25rem;
 	line-height: 1;
-	padding: .6em 1em .4em;
+	padding: .5em 1em;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-button:hover,
+button:hover, button:active, button:focus,
 input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-}
-
-button:active, button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
+input[type="reset"]:hover,
 input[type="reset"]:active,
 input[type="reset"]:focus,
+input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus {
 	border-color: #aaa #bbb #bbb;
-	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	/*		box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);*/
 }
 
 input[type="text"],
@@ -779,7 +774,7 @@ a:hover, a:active {
 
 .main-navigation {
 	display: block;
-	font-family: "Cormorant Garamond", Helvetica, serif;
+	font-family: "Quattrocento", Georgia, Cambria, "Times New Roman", serif;
 	font-weight: 400;
 	clear: left;
 }
@@ -872,6 +867,7 @@ button.dropdown-toggle {
 
 /* Toggle small menu and sub-menus on */
 .toggled-on ul,
+ul.children.toggled-on,
 .sub-menu.toggled-on {
 	display: block;
 }
@@ -923,6 +919,81 @@ button.dropdown-toggle {
 }
 
 /*@import "header/_header.scss";*/
+/*--------------------------------------------------------------
+##footer
+--------------------------------------------------------------*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 18, 2018, 1:31:16 PM
+    Author     : henry
+*/
+.site-footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 18, 2018, 1:31:41 PM
+    Author     : henry
+*/
+footer.site-footer {
+	padding-top: 1em;
+	padding-bottom: 2em;
+	background-color: #8bd145;
+	font-family: "Quattrocento", Georgia, Cambria, "Times New Roman", serif;
+}
+
+footer.site-footer a {
+	color: white;
+}
+
+ul#secondary-menu {
+	width: 50%;
+	display: block;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+li.menu-item {
+	padding: .3em;
+	list-style: none;
+	-webkit-box-flex: row;
+	    -ms-flex: row;
+	        flex: row;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.site-info {
+	padding-left: 25px;
+	width: 33%;
+	font-size: .8em;
+}
+
+@media screen and (max-width: 900px) {
+	ul#secondary-menu {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
