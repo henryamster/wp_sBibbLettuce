@@ -931,13 +931,33 @@ and open the template in the editor.
     Created on : Jan 18, 2018, 1:31:16 PM
     Author     : henry
 */
-.site-footer {
+footer.site-footer {
+	padding-top: 1em;
+	padding-bottom: 2em;
+	background-color: #8bd145;
+	font-family: "Quattrocento", Georgia, Cambria, "Times New Roman", serif;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+}
+
+footer.site-footer a {
+	color: white;
+	text-decoration: none;
+}
+
+footer.site-footer a:hover {
+	text-decoration: underline;
+}
+
+.site-info {
+	padding-left: 5px;
+	width: 33%;
+	font-size: .8em;
+	display: block;
 }
 
 /*
@@ -949,43 +969,31 @@ and open the template in the editor.
     Created on : Jan 18, 2018, 1:31:41 PM
     Author     : henry
 */
-footer.site-footer {
-	padding-top: 1em;
-	padding-bottom: 2em;
-	background-color: #8bd145;
-	font-family: "Quattrocento", Georgia, Cambria, "Times New Roman", serif;
-}
-
-footer.site-footer a {
-	color: white;
-}
-
 ul#secondary-menu {
 	width: 50%;
-	display: block;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	margin: 0;
+	padding: 0;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
 }
 
 li.menu-item {
 	padding: .3em;
 	list-style: none;
-	-webkit-box-flex: row;
-	    -ms-flex: row;
-	        flex: row;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
 
-.site-info {
-	padding-left: 25px;
-	width: 33%;
-	font-size: .8em;
-}
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
 	ul#secondary-menu {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;

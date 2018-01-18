@@ -217,3 +217,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+//hotfix for ob_end_flush error:
+remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );

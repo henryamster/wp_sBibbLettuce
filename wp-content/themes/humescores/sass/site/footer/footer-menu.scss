@@ -7,35 +7,26 @@ and open the template in the editor.
     Created on : Jan 18, 2018, 1:31:41 PM
     Author     : henry
 */
-footer.site-footer{
-    padding-top:1em;
-    padding-bottom:2em;
-       background-color:$color__skin;
-       font-family:$font__aa;
-       a{
-           color:white;
-       }
-}
+
 ul#secondary-menu{
     width:50%;
-    display: block;
-    display: flex;
+    display: flex;;
+    margin:0;
+    padding:0;
+    flex-direction: row;
    
     
 }
 li.menu-item {
     padding:.3em;
     list-style: none;
-    flex: row;
+    display:flex;
+    
     justify-content:space-between;
 }
-.site-info{
-    padding-left:25px;
-    width:33%;
-    font-size:.8em;
-}
 
- @media screen and (max-width: $query__med){
+
+ @media screen and (max-width: $query__small){
      ul#secondary-menu{
     flex-direction: column;
     }}

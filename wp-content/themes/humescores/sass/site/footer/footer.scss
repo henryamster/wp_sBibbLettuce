@@ -8,9 +8,27 @@ and open the template in the editor.
     Author     : henry
 */
 
-
-.site-footer{
-    display:flex;
+footer.site-footer{
+    padding-top:1em;
+    padding-bottom:2em;
+       background-color:$color__skin;
+       font-family:$font__aa;
+       display:flex;
     justify-content: space-between;
+       
+       a{
+           color:white;
+           text-decoration: none;
+       }
+       a:hover{
+            text-decoration: underline;
+       }
+}
+.site-info{
+    padding-left:5px;
+    width:33%;
+    font-size:.8em;
+    display:block;
 }
 @import "footer-menu.scss";
+
