@@ -1013,6 +1013,76 @@ li.menu-item {
 	margin: 0 0 1.5em;
 }
 
+.entry-header {
+	font-family: "Quattrocento", Georgia, Cambria, "Times New Roman", serif;
+}
+
+.cat-links {
+	font-size: 90%;
+	font-weight: 700;
+}
+
+.cat-links a {
+	font-decoration: none;
+	text-transform: uppercase;
+	color: #3c7627;
+}
+
+.cat-links a:hover, .cat-links a:focus {
+	background-color: #3c7627;
+	color: white;
+	padding: 2px;
+	border-radius: 5px;
+	background-clip: padding-box;
+	/* stops bg color from leaking outside the border: */
+}
+
+.entry-title {
+	margin: .125em 0 .25em;
+	font-size: 2.5em;
+}
+
+@media screen and (min-width: 900px) {
+	.entry-title {
+		font-size: 3em;
+	}
+}
+
+.entry-title a {
+	text-decoration: none;
+	color: #8bd145;
+}
+
+.entry-title :focus, .entry-title :hover {
+	border-bottom: 5px solid #3c7627;
+}
+
+.entry-meta {
+	font-size: 90%;
+}
+
+.entry-meta a {
+	color: #3c7627;
+	font-weight: 300;
+	text-decoration: none;
+}
+
+.entry-meta a:focus, .entry-meta a:hover {
+	color: #8bd145;
+	border-bottom: 2px double #3c7627;
+}
+
+.byline::after {
+	content: "||";
+	margin: 0 .5em;
+}
+
+.comments-link::before,
+.edit-link::before {
+	content: "||";
+	margin: 0 .5em;
+}
+
 .byline,
 .updated:not(.published) {
 	display: none;
