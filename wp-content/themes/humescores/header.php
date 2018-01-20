@@ -45,7 +45,7 @@
                         if ($description || is_customize_preview()) :
                             ?>
                             <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-                            <?php endif;
+                        <?php endif;
                         ?>
                     </div>
                 </div><!-- .site-branding -->

@@ -14,19 +14,19 @@ ul#secondary-menu{
     margin:0;
     padding:0;
     flex-direction: row;
-   
-    
+
+
 }
 li.menu-item {
     padding:.3em;
     list-style: none;
     display:flex;
-    
+
     justify-content:space-between;
 }
 
 
- @media screen and (max-width: $query__small){
-     ul#secondary-menu{
-    flex-direction: column;
+@media screen and (max-width: $query__med){
+    ul#secondary-menu{
+        flex-direction: column;
     }}

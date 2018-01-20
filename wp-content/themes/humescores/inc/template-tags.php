@@ -34,18 +34,20 @@ function humescores_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="byline"> ' . $byline . '.</span> <span class="posted-on">' . $posted_on . '.</span> '; // WPCS: XSS OK.
-	if (  ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+	echo '<span class="byline"> ' . $byline . '</span> <span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+	
+	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo ' <span class="comments-link">';
 		/* translators: %s: post title */
 		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'humescores' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
-                     edit_post_link(
+	
+	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( ' Edit %s', 'humescores' ),
-			the_title( ' <span class="screen-reader-text">"', '"</span>', false )
+			esc_html__( 'Edit %s', 'humescores' ),
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		' <span class="edit-link">',
 		'</span>'
@@ -59,9 +61,8 @@ if ( ! function_exists( 'humescores_entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function humescores_entry_footer() {
-	// Hide category and tag text for pages.
+	// Hide tag text for pages.
 	if ( 'post' === get_post_type() ) {
-		
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'humescores' ) );
@@ -70,17 +71,19 @@ function humescores_entry_footer() {
 		}
 	}
 
-
-	
 }
 endif;
 
+/**
+ * Display category list
+ */
+
 function humescores_the_category_list() {
-    /* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'humescores' ) );
-		if ( $categories_list && humescores_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( '%1$s', 'humescores' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
+	/* translators: used between list items, there is a space after the comma */
+	$categories_list = get_the_category_list( esc_html__( ', ', 'humescores' ) );
+	if ( $categories_list && humescores_categorized_blog() ) {
+		printf( '<span class="cat-links">' . esc_html__( '%1$s', 'humescores' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+	}
 }
 
 /**
@@ -125,3 +128,18 @@ function humescores_category_transient_flusher() {
 }
 add_action( 'edit_category', 'humescores_category_transient_flusher' );
 add_action( 'save_post',     'humescores_category_transient_flusher' );
+
+
+/**
+ * Post navigation (previous / next post) for single posts.
+ */
+function humescores_post_navigation() {
+	the_post_navigation( array(
+		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'humescores' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Next post:', 'humescores' ) . '</span> ' .
+			'<span class="post-title">%title</span>',
+		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'humescores' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Previous post:', 'humescores' ) . '</span> ' .
+			'<span class="post-title">%title</span>',
+	) );
+}

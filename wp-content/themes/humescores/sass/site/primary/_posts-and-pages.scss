@@ -1,9 +1,9 @@
 .sticky {
-	display: block;
+    display: block;
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+    margin: 0 0 1.5em;
 }
 .entry-header{
     font-family:$font__aa;
@@ -31,7 +31,7 @@
     @media screen and (min-width:$query__med){
         font-size:3em;
     }
-    
+
     a{
         text-decoration: none;
         color:$color__skin;
@@ -61,7 +61,7 @@
 
 .comments-link,
 .edit-link{
-     &::before {
+    &::before {
         content: "||";
         margin: 0 .5em;
     }
@@ -69,21 +69,133 @@
 
 .byline,
 .updated:not(.published){
-	display: none;
+    display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+    display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+    margin: 1.5em 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+    clear: both;
+    margin: 0 0 1.5em;
+}
+
+
+.no-sidebar {
+
+    .entry-meta {
+        margin-top: 1.5em;
+    }
+
+    @media screen and (min-width: $query__med) {
+        .post-content__wrap {
+
+            .entry-meta {
+                margin-top: 2.25em;
+                font-size: 80%;
+
+                a {
+                    font-size: 110%;
+                    display: block;
+                    border-bottom: 3px solid white;
+
+                    &:hover,
+                        &:focus {
+                        border-bottom-color: $color__interactive;
+                    }
+                }
+            }
+
+            .byline,
+            .posted-on,
+            .comments-link,
+            .edit-link {
+                display: block;
+                margin-bottom: 1em;
+
+                &:before,
+                    &:after {
+                    margin: 0;
+                    content: "";
+                }
+            }
+            .byline{
+                font-style: italic;
+                font-size:.6em;
+                a{
+                    font-style:normal;
+                    font-size:1rem;
+                }
+            }
+            .posted-on{
+                font-style: italic;
+                font-size:.6em;
+                a{
+                    font-style:normal;
+                    font-size:1rem;
+                }
+            }
+
+            .extra {
+                display: inline;
+            }
+        }
+
+    }
+}
+
+/* Single Post Featured Images */
+
+.full-bleed {
+    width: 100vw;
+    max-height: 1200px;
+    margin-top: 1em;
+    margin-left: -1em;
+    border-top: 1px solid hsl(0, 0%, 90%);
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+    overflow: hidden;
+    background-color:#333333;
+
+    @media screen and (min-width: $query__small) {
+        margin-left: -2em;
+    }
+
+    @media screen and (min-width: $query__med) {
+        margin-top: 1.5em;
+        margin-right: -2em;
+    }
+
+    @media screen and (min-width: $size__max-width) {
+        margin-right: calc( ((-100vw + #{$size__max-width})/2) - 2em );
+        margin-left: calc( ((-100vw + #{$size__max-width})/2) - 2em );
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 1.5em 0 0;
+}
+
+.page-links {
+    clear: both;
+    margin: 0 0 1.5em;
+}
+
+.entry-footer {
+    margin: 1.5em 0;
+    font-family: $font__aa;
 }

@@ -42,6 +42,7 @@ if (!function_exists('humescores_setup')) :
          * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
          */
         add_theme_support('post-thumbnails');
+        add_image_size('humescores-full-bleed, 2000,1200, true');
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus(array(
@@ -184,6 +185,7 @@ function humescores_scripts() {
            'collapse'=> __( 'Collapse child menu', 'humescores'),
         
     ));
+    wp_enqueue_script('humescores-functions',get_template_directory_uri() . '/js/functions.js', array('jquery'),  '20180119', true);
     wp_enqueue_script('humescores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
