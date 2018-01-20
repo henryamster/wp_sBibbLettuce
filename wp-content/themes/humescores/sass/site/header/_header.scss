@@ -9,10 +9,10 @@
 .site-header {
 	position: relative;
 	padding: 1em;
-	font-family: $font__aa;
-	color: #fff;
+	font-family: $font__bb;
+	color: $color__g4;
 	background-color: $color__interactive;
-        flexwrap:wrap;
+            flexwrap:wrap;
 	
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
@@ -49,7 +49,7 @@
 	line-height: 1em;
 	
 	a {
-		color: white;
+		color: $color__g5;
 		text-decoration: none;
 		
 		&:hover,

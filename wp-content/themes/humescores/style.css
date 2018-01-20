@@ -374,7 +374,7 @@ html {
 }
 
 body {
-	background: #ccff66;
+	background: #ccffcc;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -522,15 +522,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #333300;
+	color: #ff9999;
 }
 
 a:visited {
-	color: #333300;
+	color: #ff6633;
 }
 
 a:hover, a:focus, a:active {
-	color: #99cc00;
+	color: #9F9881;
 }
 
 a:focus {
@@ -546,7 +546,7 @@ a:hover, a:active {
 .entry-summary a,
 .comment-content a {
 	text-decoration: none;
-	border-bottom: 2px dotted #3c7627;
+	border-bottom: 2px dotted #005967;
 }
 
 .page-content a:focus, .page-content a:hover,
@@ -556,8 +556,8 @@ a:hover, a:active {
 .entry-summary a:hover,
 .comment-content a:focus,
 .comment-content a:hover {
-	color: #3c7627;
-	border-bottom: 2px solid #ffff99;
+	color: #005967;
+	border-bottom: 2px solid #9999ff;
 }
 
 /*--------------------------------------------------------------
@@ -581,7 +581,7 @@ a:hover, a:active {
 	width: 100%;
 	text-decoration: none;
 	padding: 1em;
-	border: 1px solid #ffff99;
+	border: 1px solid #9999ff;
 	color: black;
 }
 
@@ -593,8 +593,8 @@ a:hover, a:active {
 .paging-navigation a:hover,
 .paging-navigation a:focus {
 	color: white;
-	border-color: #3c7627;
-	background: #3c7627;
+	border-color: #005967;
+	background: #005967;
 }
 
 .nav-links {
@@ -658,7 +658,7 @@ a:hover, a:active {
 .post-navigation .post-title {
 	font-size: 1.2em;
 	font-weight: 700;
-	border-bottom: 3px solid #3c7627;
+	border-bottom: 3px solid #005967;
 }
 
 .post-navigation a:hover .post-title,
@@ -838,9 +838,9 @@ a:hover, a:active {
 .site-header {
 	position: relative;
 	padding: 1em;
-	font-family: "Quattrocento", Georgia, Cambria, "Times New Roman", serif;
-	color: #fff;
-	background-color: #3c7627;
+	font-family: "Cormorant Garamond", Helvetica, serif;
+	color: #DB9C72;
+	background-color: #005967;
 	flexwrap: wrap;
 }
 
@@ -890,7 +890,7 @@ a:hover, a:active {
 }
 
 .site-title a {
-	color: white;
+	color: #FF9990;
 	text-decoration: none;
 }
 
@@ -974,7 +974,7 @@ a:hover, a:active {
 	width: 100%;
 	padding: .5em 1em .5em 0;
 	text-decoration: none;
-	color: #cbf1be;
+	color: #DB9C72;
 }
 
 .main-navigation a:hover,
@@ -1084,7 +1084,7 @@ and open the template in the editor.
 footer.site-footer {
 	padding-top: 1em;
 	padding-bottom: 2em;
-	background-color: #ffff99;
+	background-color: #9999ff;
 	font-family: "Quattrocento", Georgia, Cambria, "Times New Roman", serif;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1186,11 +1186,11 @@ li.menu-item {
 .cat-links a {
 	font-decoration: none;
 	text-transform: uppercase;
-	color: #3c7627;
+	color: #005967;
 }
 
 .cat-links a:hover, .cat-links a:focus {
-	background-color: #3c7627;
+	background-color: #005967;
 	color: white;
 	padding: 2px;
 	border-radius: 5px;
@@ -1211,11 +1211,11 @@ li.menu-item {
 
 .entry-title a {
 	text-decoration: none;
-	color: #ffff99;
+	color: #9999ff;
 }
 
 .entry-title :focus, .entry-title :hover {
-	border-bottom: 5px solid #3c7627;
+	border-bottom: 5px solid #005967;
 }
 
 .entry-meta {
@@ -1223,14 +1223,14 @@ li.menu-item {
 }
 
 .entry-meta a {
-	color: #3c7627;
+	color: #005967;
 	font-weight: 300;
 	text-decoration: none;
 }
 
 .entry-meta a:focus, .entry-meta a:hover {
-	color: #ffff99;
-	border-bottom: 2px double #3c7627;
+	color: #9999ff;
+	border-bottom: 2px double #005967;
 }
 
 .byline::after {
@@ -1280,7 +1280,7 @@ li.menu-item {
 		border-bottom: 3px solid white;
 	}
 	.no-sidebar .post-content__wrap .entry-meta a:hover, .no-sidebar .post-content__wrap .entry-meta a:focus {
-		border-bottom-color: #3c7627;
+		border-bottom-color: #005967;
 	}
 	.no-sidebar .post-content__wrap .byline,
 	.no-sidebar .post-content__wrap .posted-on,
@@ -1527,8 +1527,8 @@ li.menu-item {
 
 .reply a:hover, .reply a:focus {
 	color: #fff;
-	background: #3c7627;
-	border-color: #3c7627;
+	background: #005967;
+	border-color: #005967;
 }
 
 .comment-content ol {
@@ -1541,7 +1541,7 @@ li.menu-item {
 
 .bypostauthor .avatar {
 	box-sizing: content-box;
-	border: 5px double #3c7627;
+	border: 5px double #005967;
 	margin-top: -5px;
 	margin-left: -5px;
 }
@@ -1579,8 +1579,8 @@ li.menu-item {
 
 .comment-form .form-submit input:hover, .comment-form .form-submit input:focus {
 	color: #fff;
-	background: #3c7627;
-	border-color: #3c7627;
+	background: #005967;
+	border-color: #005967;
 }
 
 .comment-form label {
@@ -1643,7 +1643,7 @@ li.menu-item {
 }
 
 .widget a:hover, .widget a:focus {
-	border-bottom: 3px solid #3c7627;
+	border-bottom: 3px solid #005967;
 }
 
 .widget select {
@@ -1702,7 +1702,7 @@ object {
 	margin-bottom: 2em;
 	max-width: 100%;
 	font-size: 85%;
-	color: #ffff99;
+	color: #9999ff;
 	text-align: center;
 	font-style: italic;
 }
@@ -1768,7 +1768,7 @@ object {
 }
 
 .gallery-item a:hover img, .gallery-item a:focus img {
-	border-color: #3c7627;
+	border-color: #005967;
 }
 
 .gallery-item a img {
