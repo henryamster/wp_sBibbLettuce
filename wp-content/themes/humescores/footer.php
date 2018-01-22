@@ -18,18 +18,19 @@
 
 <footer id="colophon" class="site-footer <?= ($noWidget)? 'no-widget': 'yes-widget'?>" role="contentinfo">
     <div class="footer-widget ">
-        
-        <?php
-if ( ! is_active_sidebar( 'sidebar-2' ) ) {
-    $noWidget = true;
-	return;
-}
-?>
 
-<aside id="footer-widget-area" class="widget-area f-widget" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-2' ); ?>
-</aside><!-- #secondary -->
+        <?php
+        if (!is_active_sidebar('sidebar-2')) {
+            $noWidget = true;
+            return;
+        }
+        ?>
+
+        <aside id="footer-widget-area" class="widget-area f-widget" role="complementary">
+            <?php dynamic_sidebar('sidebar-2'); ?>
+        </aside><!-- #footer-widget-area -->
     </div>
+    <div class="footer-info">
     <div class="social-media__container">
         <nav id="social-media" class="footer-navigation" role="navigation">
 
@@ -42,7 +43,7 @@ if ( ! is_active_sidebar( 'sidebar-2' ) ) {
         <?php printf(esc_html__('Theme: %1$s by %2$s.', 'humescores'), 'humescores', '<a href="https://henrtfritz.xyz" rel="designer">Mr. Bibb Let Us</a>'); ?>
 
     </div><!-- .site-info -->
-
+    </div>
 
 </footer><!-- #colophon -->
 </div><!-- #page -->

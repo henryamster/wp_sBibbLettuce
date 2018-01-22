@@ -14,8 +14,8 @@ footer.site-footer{
     background-color:$color__skin;
     font-family:$font__aa;
 
-/*    display:flex;
-    justify-content: space-between;*/
+/*    display:flex;*/
+/*    justify-content: space-between;*/
 
     a{
         color:white;
@@ -29,20 +29,34 @@ footer.site-footer{
 
 
 .site-info{
-    padding:5px;
+    
+    padding-top:5px;
     width:50%;
     font-size:.8em;
     display:block;
 }
+.footer-info{
+/*    padding-top:20px;*/
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+ .social-media__container{
+        font-size:.8em;
+        font-weight:bold;}
+ 
 @import "footer-menu.scss";
 @media screen and (max-width:$query__small){
     .site-info{
         visibility:hidden;
     }
     .social-media__container{
-        width:100vw;
+        font-size:1.2em;
+        width:100%;
         text-align:center;
-        padding-left:25px;
+   
     }
 }
 

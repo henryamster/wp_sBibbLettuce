@@ -1086,8 +1086,8 @@ footer.site-footer {
 	padding-bottom: 2em;
 	background-color: #9999ff;
 	font-family: "Quattrocento", Georgia, Cambria, "Times New Roman", serif;
-	/*    display:flex;
-    justify-content: space-between;*/
+	/*    display:flex;*/
+	/*    justify-content: space-between;*/
 }
 
 footer.site-footer a {
@@ -1100,10 +1100,30 @@ footer.site-footer a:hover {
 }
 
 .site-info {
-	padding: 5px;
+	padding-top: 5px;
 	width: 50%;
 	font-size: .8em;
 	display: block;
+}
+
+.footer-info {
+	/*    padding-top:20px;*/
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+}
+
+.social-media__container {
+	font-size: .8em;
+	font-weight: bold;
 }
 
 /*
@@ -1154,9 +1174,9 @@ li.menu-item {
 		visibility: hidden;
 	}
 	.social-media__container {
-		width: 100vw;
+		font-size: 1.2em;
+		width: 100%;
 		text-align: center;
-		padding-left: 25px;
 	}
 }
 
@@ -1169,6 +1189,7 @@ li.menu-item {
 
 .hentry {
 	margin: 0 0 1.5em;
+	max-width: 950px;
 }
 
 .entry-header {
@@ -1798,7 +1819,7 @@ li.menu-item {
 
 /* Footer widget stylings */
 #footer-widget-area {
-	width: 100vw;
+	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1820,7 +1841,7 @@ li.menu-item {
 }
 
 .widget {
-	min-width: 30vw;
+	min-width: 30%;
 	/* width:auto;*/
 	/*flex: 1 1 30%;*/
 }
@@ -2127,7 +2148,7 @@ flex:1;
 
 /* Footer widget stylings */
 #footer-widget-area {
-	width: 100vw;
+	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -2149,7 +2170,7 @@ flex:1;
 }
 
 .widget {
-	min-width: 30vw;
+	min-width: 30%;
 	/* width:auto;*/
 	/*flex: 1 1 30%;*/
 }

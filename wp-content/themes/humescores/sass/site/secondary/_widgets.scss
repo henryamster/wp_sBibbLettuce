@@ -208,7 +208,7 @@
 
 /* Footer widget stylings */
 #footer-widget-area{
-    width:100vw;
+    width:100%;
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
@@ -217,7 +217,7 @@
 	}
 }
 .widget{
- min-width: 30vw;
+ min-width: 30%;
 /* width:auto;*/
 /*flex: 1 1 30%;*/
 }
