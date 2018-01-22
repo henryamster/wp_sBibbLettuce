@@ -1099,38 +1099,6 @@ footer.site-footer a:hover {
 	text-decoration: underline;
 }
 
-footer.site-footer.no-widgets {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	-ms-flex-pack: distribute;
-	    justify-content: space-around;
-}
-
-footer.site-footer.yes-widgets {
-	display: block;
-	text-align: center;
-}
-
-section.widget {
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: row;
-	        flex-direction: row;
-}
-
-footer.footer-widget {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	-ms-flex-pack: distribute;
-	    justify-content: space-around;
-}
-
 .site-info {
 	padding: 5px;
 	width: 50%;
@@ -1161,7 +1129,7 @@ ul#secondary-menu {
 }
 
 li.menu-item {
-	padding: .3em;
+	padding: .9em;
 	list-style: none;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1173,6 +1141,7 @@ li.menu-item {
 
 @media screen and (max-width: 900px) {
 	ul#secondary-menu {
+		padding-top: 5px;
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		    -ms-flex-direction: column;
@@ -1828,19 +1797,48 @@ li.menu-item {
 }
 
 /* Footer widget stylings */
-.footer-widget {
+#footer-widget-area {
+	width: 100vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+	#footer-widget-area {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+
+.widget {
+	min-width: 30vw;
+	/* width:auto;*/
+	/*flex: 1 1 30%;*/
+}
+
+.f-widget {
 	margin: 2em 0 0;
 	padding: 1em 0;
-	background-color: #1a1a1a;
+	background-color: #FF9990;
+	color: #DB9C72;
 }
 
 @media screen and (min-width: 600px) {
-	.footer-widget {
+	.f-widget {
 		padding: 2em 1em;
 	}
 }
 
-.footer-widget .widget {
+.f-widget section.widget {
 	-webkit-box-flex: 1;
 	    -ms-flex: 1;
 	        flex: 1;
@@ -1848,27 +1846,27 @@ li.menu-item {
 	padding-top: 1em;
 }
 
-.footer-widget .widget .original-title {
-	color: rgba(255, 255, 255, 0.5);
+.f-widget section.widget .original-title {
+	color: #FF9990;
 }
 
-.footer-widget .widget,
-.footer-widget .widget-title,
-.footer-widget .widget a,
-.footer-widget .widget_calendar thead,
-.footer-widget .rss-date,
-.footer-widget .widget_rss cite {
+.f-widget .widget,
+.f-widget .widget-title,
+.f-widget .widget a,
+.f-widget .widget_calendar thead,
+.f-widget .rss-date,
+.f-widget .widget_rss cite {
 	color: white;
 }
 
-.footer-widget .widget_calendar td,
-.footer-widget .widget_calendar a {
+.f-widget .widget_calendar td,
+.f-widget .widget_calendar a {
 	color: black;
 }
 
 @media screen and (min-width: 900px) {
-	.footer-widget {
-		/* Use flex to create a responsive layout */
+	.f-widget {
+		/*		 Use flex to create a responsive layout */
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -1876,20 +1874,20 @@ li.menu-item {
 		    flex-wrap: wrap;
 		-ms-flex-pack: distribute;
 		    justify-content: space-around;
-		/* If only one widget is displayed, make it full width. */
-		/* If 2 or 3 widgets are displayed, make the second one twice as wide. */
-		/* If 4 or more widgets are displayed, show three across when available. */
+		/*		 If only one widget is displayed, make it full width. */
+		/*		 If 2 or 3 widgets are displayed, make the second one twice as wide. */
+		/*		 If 4 or more widgets are displayed, show three across when available. */
 	}
-	.footer-widget .widget:only-of-type {
+	.f-widget .widget:only-of-type {
 		width: 100%;
 	}
-	.footer-widget .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
+	.f-widget .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
 		-webkit-box-flex: 2;
 		    -ms-flex: 2;
 		        flex: 2;
 	}
-	.footer-widget .widget:nth-last-child(n+4),
-	.footer-widget .widget:nth-last-child(n+4) ~ .widget {
+	.f-widget .widget:nth-last-child(n+4),
+	.f-widget .widget:nth-last-child(n+4) ~ .widget {
 		width: 30%;
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 1 30%;
@@ -1897,6 +1895,29 @@ li.menu-item {
 	}
 }
 
+/*
+
+footer.site-footer.no-widgets{
+   display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+}
+footer.site-footer.yes-widgets{
+    display:block;
+    text-align:center;
+flex:1;
+}
+/*section.widget{
+ 
+    flex-direction: row;
+  
+   
+}*/
+/*footer.footer-widget{
+   display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+}*/
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -2105,19 +2126,48 @@ li.menu-item {
 }
 
 /* Footer widget stylings */
-.footer-widget {
+#footer-widget-area {
+	width: 100vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+	#footer-widget-area {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+
+.widget {
+	min-width: 30vw;
+	/* width:auto;*/
+	/*flex: 1 1 30%;*/
+}
+
+.f-widget {
 	margin: 2em 0 0;
 	padding: 1em 0;
-	background-color: #1a1a1a;
+	background-color: #FF9990;
+	color: #DB9C72;
 }
 
 @media screen and (min-width: 600px) {
-	.footer-widget {
+	.f-widget {
 		padding: 2em 1em;
 	}
 }
 
-.footer-widget .widget {
+.f-widget section.widget {
 	-webkit-box-flex: 1;
 	    -ms-flex: 1;
 	        flex: 1;
@@ -2125,27 +2175,27 @@ li.menu-item {
 	padding-top: 1em;
 }
 
-.footer-widget .widget .original-title {
-	color: rgba(255, 255, 255, 0.5);
+.f-widget section.widget .original-title {
+	color: #FF9990;
 }
 
-.footer-widget .widget,
-.footer-widget .widget-title,
-.footer-widget .widget a,
-.footer-widget .widget_calendar thead,
-.footer-widget .rss-date,
-.footer-widget .widget_rss cite {
+.f-widget .widget,
+.f-widget .widget-title,
+.f-widget .widget a,
+.f-widget .widget_calendar thead,
+.f-widget .rss-date,
+.f-widget .widget_rss cite {
 	color: white;
 }
 
-.footer-widget .widget_calendar td,
-.footer-widget .widget_calendar a {
+.f-widget .widget_calendar td,
+.f-widget .widget_calendar a {
 	color: black;
 }
 
 @media screen and (min-width: 900px) {
-	.footer-widget {
-		/* Use flex to create a responsive layout */
+	.f-widget {
+		/*		 Use flex to create a responsive layout */
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -2153,20 +2203,20 @@ li.menu-item {
 		    flex-wrap: wrap;
 		-ms-flex-pack: distribute;
 		    justify-content: space-around;
-		/* If only one widget is displayed, make it full width. */
-		/* If 2 or 3 widgets are displayed, make the second one twice as wide. */
-		/* If 4 or more widgets are displayed, show three across when available. */
+		/*		 If only one widget is displayed, make it full width. */
+		/*		 If 2 or 3 widgets are displayed, make the second one twice as wide. */
+		/*		 If 4 or more widgets are displayed, show three across when available. */
 	}
-	.footer-widget .widget:only-of-type {
+	.f-widget .widget:only-of-type {
 		width: 100%;
 	}
-	.footer-widget .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
+	.f-widget .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
 		-webkit-box-flex: 2;
 		    -ms-flex: 2;
 		        flex: 2;
 	}
-	.footer-widget .widget:nth-last-child(n+4),
-	.footer-widget .widget:nth-last-child(n+4) ~ .widget {
+	.f-widget .widget:nth-last-child(n+4),
+	.f-widget .widget:nth-last-child(n+4) ~ .widget {
 		width: 30%;
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 1 30%;
@@ -2174,6 +2224,29 @@ li.menu-item {
 	}
 }
 
+/*
+
+footer.site-footer.no-widgets{
+   display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+}
+footer.site-footer.yes-widgets{
+    display:block;
+    text-align:center;
+flex:1;
+}
+/*section.widget{
+ 
+    flex-direction: row;
+  
+   
+}*/
+/*footer.footer-widget{
+   display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+}*/
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

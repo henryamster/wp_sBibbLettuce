@@ -18,7 +18,7 @@ ul#secondary-menu{
 
 }
 li.menu-item {
-    padding:.3em;
+    padding:.9em;
     list-style: none;
     display:flex;
 
@@ -28,5 +28,6 @@ li.menu-item {
 
 @media screen and (max-width: $query__med){
     ul#secondary-menu{
+        padding-top:5px;
         flex-direction: column;
     }}

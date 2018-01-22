@@ -20,13 +20,13 @@
     <div class="footer-widget ">
         
         <?php
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'sidebar-2' ) ) {
     $noWidget = true;
 	return;
 }
 ?>
 
-<aside id="footer-widget-area" class="widget-area" role="complementary">
+<aside id="footer-widget-area" class="widget-area f-widget" role="complementary">
 	<?php dynamic_sidebar( 'sidebar-2' ); ?>
 </aside><!-- #secondary -->
     </div>

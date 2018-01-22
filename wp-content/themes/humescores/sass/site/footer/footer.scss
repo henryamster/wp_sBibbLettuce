@@ -13,6 +13,7 @@ footer.site-footer{
     padding-bottom:2em;
     background-color:$color__skin;
     font-family:$font__aa;
+
 /*    display:flex;
     justify-content: space-between;*/
 
@@ -26,27 +27,7 @@ footer.site-footer{
 }
 
 
-footer.site-footer.no-widgets{
-   display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-}
-footer.site-footer.yes-widgets{
-    display:block;
-    text-align:center;
-}
 
-section.widget{
- 
-    flex-direction: row;
-  
-   
-}
-footer.footer-widget{
-   display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-}
 .site-info{
     padding:5px;
     width:50%;
