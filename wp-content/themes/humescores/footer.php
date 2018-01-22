@@ -8,11 +8,28 @@
  *
  * @package Humescores
  */
+ $noWidget = false;
 ?>
+
 
 </div><!-- #content -->
 
-<footer id="colophon" class="site-footer" role="contentinfo">
+
+
+<footer id="colophon" class="site-footer <?= ($noWidget)? 'no-widget': 'yes-widget'?>" role="contentinfo">
+    <div class="footer-widget ">
+        
+        <?php
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+    $noWidget = true;
+	return;
+}
+?>
+
+<aside id="footer-widget-area" class="widget-area" role="complementary">
+	<?php dynamic_sidebar( 'sidebar-2' ); ?>
+</aside><!-- #secondary -->
+    </div>
     <div class="social-media__container">
         <nav id="social-media" class="footer-navigation" role="navigation">
 
