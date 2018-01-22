@@ -758,6 +758,10 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Global Layout
 --------------------------------------------------------------*/
+* {
+	outline: 1px solid red;
+}
+
 .site-content {
 	padding: 1em;
 }
@@ -775,6 +779,10 @@ a:hover, a:active {
 
 .widget-area {
 	font-size: .8rem;
+}
+
+.content-area {
+	max-width: 1080px;
 }
 
 @media screen and (min-width: 900px) {
@@ -1276,6 +1284,7 @@ li.menu-item {
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+	max-width: 100%;
 }
 
 .page-links {
