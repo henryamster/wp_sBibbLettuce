@@ -143,3 +143,14 @@ function humescores_post_navigation() {
 			'<span class="post-title">%title</span>',
 	) );
 }
+/* replace ellipses in brackets with just ellipses*/
+
+function humescores_excerpt_more( $more ) {
+	return '...';
+}
+add_filter( 'excerpt_more', 'humescores_excerpt_more' );
+/*change excerpt word length */
+function humescores_excerpt_length ( $length){
+    return 100;
+}
+add_filter('excerpt_length', 'humescores_excerpt_length');

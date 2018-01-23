@@ -164,7 +164,7 @@
     border-top: 1px solid hsl(0, 0%, 90%);
     border-bottom: 1px solid hsl(0, 0%, 90%);
     overflow: hidden;
-    background-color:#333333;
+    background-color:$color__g2;
 
     @media screen and (min-width: $query__small) {
         margin-left: -2em;
