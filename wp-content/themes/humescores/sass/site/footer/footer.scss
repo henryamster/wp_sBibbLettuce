@@ -9,8 +9,8 @@ and open the template in the editor.
 */
 
 footer.site-footer{
-    padding-top:1em;
-    padding-bottom:2em;
+    padding-top:.1em;
+    padding-bottom:0;
     background-color:$color__skin;
     font-family:$font__aa;
 
@@ -30,7 +30,7 @@ footer.site-footer{
 
 .site-info{
     
-    padding-top:5px;
+    padding-top:12px;
     width:50%;
     font-size:.8em;
     display:block;
@@ -50,13 +50,15 @@ footer.site-footer{
 @import "footer-menu.scss";
 @media screen and (max-width:$query__small){
     .site-info{
-        visibility:hidden;
+/*        visibility:hidden;*/
+    display:none;
     }
     .social-media__container{
+        display:flex;
         font-size:1.2em;
-        width:100%;
-        text-align:center;
-   
+        width:100%;   
+    
     }
+   
 }
 

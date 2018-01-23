@@ -546,7 +546,7 @@ a:hover, a:active {
 .entry-summary a,
 .comment-content a {
 	text-decoration: none;
-	border-bottom: 2px dotted #005967;
+	border-bottom: 2px dotted #ffffcc;
 }
 
 .page-content a:focus, .page-content a:hover,
@@ -556,7 +556,7 @@ a:hover, a:active {
 .entry-summary a:hover,
 .comment-content a:focus,
 .comment-content a:hover {
-	color: #005967;
+	color: #ffffcc;
 	border-bottom: 2px solid #9999ff;
 }
 
@@ -592,9 +592,9 @@ a:hover, a:active {
 .post-navigation a:focus,
 .paging-navigation a:hover,
 .paging-navigation a:focus {
-	color: white;
-	border-color: #005967;
-	background: #005967;
+	color: #404040;
+	border-color: #ffffcc;
+	background: #ffffcc;
 }
 
 .nav-links {
@@ -658,7 +658,7 @@ a:hover, a:active {
 .post-navigation .post-title {
 	font-size: 1.2em;
 	font-weight: 700;
-	border-bottom: 3px solid #005967;
+	border-bottom: 3px solid #ffffcc;
 }
 
 .post-navigation a:hover .post-title,
@@ -758,10 +758,9 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Global Layout
 --------------------------------------------------------------*/
-* {
-	outline: 1px solid red;
-}
-
+/** {
+    outline: 1px solid red;
+}*/
 .site-content {
 	padding: 1em;
 }
@@ -848,7 +847,7 @@ a:hover, a:active {
 	padding: 1em;
 	font-family: "Cormorant Garamond", Helvetica, serif;
 	color: #DB9C72;
-	background-color: #005967;
+	background-color: #ffffcc;
 	flexwrap: wrap;
 }
 
@@ -1090,8 +1089,8 @@ and open the template in the editor.
     Author     : henry
 */
 footer.site-footer {
-	padding-top: 1em;
-	padding-bottom: 2em;
+	padding-top: .1em;
+	padding-bottom: 0;
 	background-color: #9999ff;
 	font-family: "Quattrocento", Georgia, Cambria, "Times New Roman", serif;
 	/*    display:flex;*/
@@ -1108,7 +1107,7 @@ footer.site-footer a:hover {
 }
 
 .site-info {
-	padding-top: 5px;
+	padding-top: 12px;
 	width: 50%;
 	font-size: .8em;
 	display: block;
@@ -1179,12 +1178,15 @@ li.menu-item {
 
 @media screen and (max-width: 600px) {
 	.site-info {
-		visibility: hidden;
+		/*        visibility:hidden;*/
+		display: none;
 	}
 	.social-media__container {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
 		font-size: 1.2em;
 		width: 100%;
-		text-align: center;
 	}
 }
 
@@ -1212,11 +1214,11 @@ li.menu-item {
 .cat-links a {
 	font-decoration: none;
 	text-transform: uppercase;
-	color: #005967;
+	color: #ffffcc;
 }
 
 .cat-links a:hover, .cat-links a:focus {
-	background-color: #005967;
+	background-color: #ffffcc;
 	color: white;
 	padding: 2px;
 	border-radius: 5px;
@@ -1241,7 +1243,7 @@ li.menu-item {
 }
 
 .entry-title :focus, .entry-title :hover {
-	border-bottom: 5px solid #005967;
+	border-bottom: 5px solid #ffffcc;
 }
 
 .entry-meta {
@@ -1249,14 +1251,14 @@ li.menu-item {
 }
 
 .entry-meta a {
-	color: #005967;
+	color: #ffffcc;
 	font-weight: 300;
 	text-decoration: none;
 }
 
 .entry-meta a:focus, .entry-meta a:hover {
 	color: #9999ff;
-	border-bottom: 2px double #005967;
+	border-bottom: 2px double #ffffcc;
 }
 
 .byline::after {
@@ -1307,7 +1309,7 @@ li.menu-item {
 		border-bottom: 3px solid white;
 	}
 	.no-sidebar .post-content__wrap .entry-meta a:hover, .no-sidebar .post-content__wrap .entry-meta a:focus {
-		border-bottom-color: #005967;
+		border-bottom-color: #ffffcc;
 	}
 	.no-sidebar .post-content__wrap .byline,
 	.no-sidebar .post-content__wrap .posted-on,
@@ -1554,8 +1556,8 @@ li.menu-item {
 
 .reply a:hover, .reply a:focus {
 	color: #fff;
-	background: #005967;
-	border-color: #005967;
+	background: #ffffcc;
+	border-color: #ffffcc;
 }
 
 .comment-content ol {
@@ -1568,7 +1570,7 @@ li.menu-item {
 
 .bypostauthor .avatar {
 	box-sizing: content-box;
-	border: 5px double #005967;
+	border: 5px double #ffffcc;
 	margin-top: -5px;
 	margin-left: -5px;
 }
@@ -1606,8 +1608,8 @@ li.menu-item {
 
 .comment-form .form-submit input:hover, .comment-form .form-submit input:focus {
 	color: #fff;
-	background: #005967;
-	border-color: #005967;
+	background: #ffffcc;
+	border-color: #ffffcc;
 }
 
 .comment-form label {
@@ -1668,7 +1670,7 @@ li.menu-item {
 }
 
 .widget a:hover, .widget a:focus {
-	border-bottom: 3px solid #005967;
+	border-bottom: 3px solid #ffffcc;
 }
 
 .widget select {
@@ -1997,7 +1999,7 @@ flex:1;
 }
 
 .widget a:hover, .widget a:focus {
-	border-bottom: 3px solid #005967;
+	border-bottom: 3px solid #ffffcc;
 }
 
 .widget select {
@@ -2385,7 +2387,7 @@ object {
 }
 
 .gallery-item a:hover img, .gallery-item a:focus img {
-	border-color: #005967;
+	border-color: #ffffcc;
 }
 
 .gallery-item a img {
