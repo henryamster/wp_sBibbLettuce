@@ -13,6 +13,7 @@
 	color: $color__g4;
 	background-color: $color__interactive;
             flexwrap:wrap;
+            
 	
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
@@ -24,6 +25,7 @@
         display:flex;
         margin-right:1em;
         flex: 1 0 auto;
+        font-size:1.4em;
 }
 .custom-logo-link{
     img{

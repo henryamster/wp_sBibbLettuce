@@ -19,7 +19,7 @@
         color: $color__interactive;
         &:hover, &:focus{
             background-color: $color__interactive;
-            color:white;
+            color:$color__text-main;
             padding:2px;
             @include border-radius(5px);
         }
