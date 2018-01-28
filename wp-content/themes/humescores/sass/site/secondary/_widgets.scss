@@ -226,7 +226,14 @@ aside#secondary{
     margin-top:40px;
 }
 
-.f-widget{
+ //page widget
+ .page-widget{
+     max-width:50%;
+     flex:0 0 33%;
+ }
+
+
+.f-widget, page-widget{
 	margin: 2em 0 0;
 	padding: 1em 0;
 	background-color: $color__g5;
@@ -284,8 +291,11 @@ aside#secondary{
 		}
 	}
 	
-}/*
+}
 
+
+ /*
+}
 footer.site-footer.no-widgets{
    display: flex;
 		flex-wrap: wrap;

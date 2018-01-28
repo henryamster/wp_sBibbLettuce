@@ -41,20 +41,24 @@ get_header(); ?>
 			endwhile;
 
 			the_posts_pagination(array(
-                            'prev_text' => __( 'Newer' ,'humescores'),
-                             'next_text' => __( 'Older' ,'humescores'),
+                            'prev_text' => humescores_get_svg(array(
+                                'icon' => 'arrow-left'
+                            )) .  __( 'Newer' ,'humescores'),
+                             'next_text' => __( 'Older' ,'humescores') . humescores_get_svg(array(
+                                'icon' => 'arrow-right'
+                            )) ,
                             'before_page_number ' => '<span class="screen-reader-text"> '.  __( 'Newer' ,'humescores') . '</span>',
                         ));
 
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
+		
+?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
 get_sidebar();
 get_footer();
+else:
+get_template_part('template-parts/content', 'none');
+return;
+endif;

@@ -8,11 +8,7 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php
+	<?php
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -21,6 +17,14 @@ get_header(); ?>
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+                            <?php else :
+     get_template_part('template-parts/content', 'none');
+            return; 
+endif; ?>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+	<?php if ( have_posts() ) : ?>
 
 			<?php
 			/* Start the Loop */
@@ -35,7 +39,15 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_pagination(array(
+                            'prev_text' => humescores_get_svg(array(
+                                'icon' => 'arrow-left'
+                            )) .  __( 'Newer' ,'humescores'),
+                             'next_text' => __( 'Older' ,'humescores') . humescores_get_svg(array(
+                                'icon' => 'arrow-right'
+                            )) ,
+                            'before_page_number ' => '<span class="screen-reader-text"> '.  __( 'Newer' ,'humescores') . '</span>',
+                        ));
 
 		else :
 

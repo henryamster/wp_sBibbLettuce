@@ -907,7 +907,8 @@ a:hover, a:active {
 	background: #99ffcc;
 }
 
-.archive-view .post {
+.archive-view .post,
+.archive-view .page {
 	/*        padding:1em;*/
 	position: relative;
 	border-radius: 12px;
@@ -918,7 +919,8 @@ a:hover, a:active {
        border-bottom: 4px solid $color__text-main;*/
 }
 
-.archive-view .post:nth-of-type(even) {
+.archive-view .post:nth-of-type(even),
+.archive-view .page:nth-of-type(even) {
 	background: #ccff99;
 }
 
@@ -937,12 +939,37 @@ a:hover, a:active {
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
+	.archive-view.has-sidebar .page-header {
+		width: 100%;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1 0 100;
+		        flex: 1 0 100;
+	}
 	.archive-view.has-sidebar div.content-area {
 		width: 60%;
 	}
 	.archive-view.has-sidebar aside.widget-area {
 		width: 30%;
 	}
+}
+
+.page-header {
+	font-family: "Cormorant Garamond", Helvetica, serif;
+	color: #ff6633;
+}
+
+.page-title {
+	margin: 0 0 .5em;
+}
+
+.archive-description {
+	margin: -1em 0 2em;
+}
+
+.sticky {
+	border: 4px double #ffffcc;
+	box-shadow: 5px 5px 12px 4px rgba(0, 0, 0, 0.15);
+	border-width: .5em  0 0 1em;
 }
 
 .index-image img {
@@ -978,6 +1005,15 @@ a:hover, a:active {
 .continue-reading a:focus, .continue-reading a:hover {
 	color: #FF9990;
 	background: #ffffcc;
+}
+
+.nothing-found {
+	background: #ff6633;
+	color: #ccc #ccc #bbb;
+	border-radius: 12px;
+	background-clip: padding-box;
+	/* stops bg color from leaking outside the border: */
+	padding: 60px;
 }
 
 /*--------------------------------------------------------------
@@ -1458,6 +1494,34 @@ li.menu-item {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.page-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@media screen and (max-width: 600px) {
+	.page-container {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: reverse;
+		    -ms-flex-direction: column-reverse;
+		        flex-direction: column-reverse;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.page-main {
+		min-width: 100%;
+	}
+}
+
+.page-main {
+	min-width: 66%;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 66%;
+	        flex: 0 1 66%;
 }
 
 .no-sidebar .entry-meta {
@@ -2027,7 +2091,14 @@ aside#secondary {
 	margin-top: 40px;
 }
 
-.f-widget {
+.page-widget {
+	max-width: 50%;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 33%;
+	        flex: 0 0 33%;
+}
+
+.f-widget, page-widget {
 	margin: 2em 0 0;
 	padding: 1em 0;
 	background-color: #FF9990;
@@ -2035,12 +2106,12 @@ aside#secondary {
 }
 
 @media screen and (min-width: 600px) {
-	.f-widget {
+	.f-widget, page-widget {
 		padding: 2em 1em;
 	}
 }
 
-.f-widget section.widget {
+.f-widget section.widget, page-widget section.widget {
 	-webkit-box-flex: 1;
 	    -ms-flex: 1;
 	        flex: 1;
@@ -2048,7 +2119,7 @@ aside#secondary {
 	padding-top: 1em;
 }
 
-.f-widget section.widget .original-title {
+.f-widget section.widget .original-title, page-widget section.widget .original-title {
 	color: #FF9990;
 }
 
@@ -2057,17 +2128,23 @@ aside#secondary {
 .f-widget .widget a,
 .f-widget .widget_calendar thead,
 .f-widget .rss-date,
-.f-widget .widget_rss cite {
+.f-widget .widget_rss cite, page-widget .widget,
+page-widget .widget-title,
+page-widget .widget a,
+page-widget .widget_calendar thead,
+page-widget .rss-date,
+page-widget .widget_rss cite {
 	color: white;
 }
 
 .f-widget .widget_calendar td,
-.f-widget .widget_calendar a {
+.f-widget .widget_calendar a, page-widget .widget_calendar td,
+page-widget .widget_calendar a {
 	color: black;
 }
 
 @media screen and (min-width: 900px) {
-	.f-widget {
+	.f-widget, page-widget {
 		/*		 Use flex to create a responsive layout */
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -2080,16 +2157,17 @@ aside#secondary {
 		/*		 If 2 or 3 widgets are displayed, make the second one twice as wide. */
 		/*		 If 4 or more widgets are displayed, show three across when available. */
 	}
-	.f-widget .widget:only-of-type {
+	.f-widget .widget:only-of-type, page-widget .widget:only-of-type {
 		width: 100%;
 	}
-	.f-widget .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
+	.f-widget .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2), page-widget .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
 		-webkit-box-flex: 2;
 		    -ms-flex: 2;
 		        flex: 2;
 	}
 	.f-widget .widget:nth-last-child(n+4),
-	.f-widget .widget:nth-last-child(n+4) ~ .widget {
+	.f-widget .widget:nth-last-child(n+4) ~ .widget, page-widget .widget:nth-last-child(n+4),
+	page-widget .widget:nth-last-child(n+4) ~ .widget {
 		width: 30%;
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 1 30%;
@@ -2098,7 +2176,7 @@ aside#secondary {
 }
 
 /*
-
+}
 footer.site-footer.no-widgets{
    display: flex;
 		flex-wrap: wrap;
@@ -2360,7 +2438,14 @@ aside#secondary {
 	margin-top: 40px;
 }
 
-.f-widget {
+.page-widget {
+	max-width: 50%;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 33%;
+	        flex: 0 0 33%;
+}
+
+.f-widget, page-widget {
 	margin: 2em 0 0;
 	padding: 1em 0;
 	background-color: #FF9990;
@@ -2368,12 +2453,12 @@ aside#secondary {
 }
 
 @media screen and (min-width: 600px) {
-	.f-widget {
+	.f-widget, page-widget {
 		padding: 2em 1em;
 	}
 }
 
-.f-widget section.widget {
+.f-widget section.widget, page-widget section.widget {
 	-webkit-box-flex: 1;
 	    -ms-flex: 1;
 	        flex: 1;
@@ -2381,7 +2466,7 @@ aside#secondary {
 	padding-top: 1em;
 }
 
-.f-widget section.widget .original-title {
+.f-widget section.widget .original-title, page-widget section.widget .original-title {
 	color: #FF9990;
 }
 
@@ -2390,17 +2475,23 @@ aside#secondary {
 .f-widget .widget a,
 .f-widget .widget_calendar thead,
 .f-widget .rss-date,
-.f-widget .widget_rss cite {
+.f-widget .widget_rss cite, page-widget .widget,
+page-widget .widget-title,
+page-widget .widget a,
+page-widget .widget_calendar thead,
+page-widget .rss-date,
+page-widget .widget_rss cite {
 	color: white;
 }
 
 .f-widget .widget_calendar td,
-.f-widget .widget_calendar a {
+.f-widget .widget_calendar a, page-widget .widget_calendar td,
+page-widget .widget_calendar a {
 	color: black;
 }
 
 @media screen and (min-width: 900px) {
-	.f-widget {
+	.f-widget, page-widget {
 		/*		 Use flex to create a responsive layout */
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -2413,16 +2504,17 @@ aside#secondary {
 		/*		 If 2 or 3 widgets are displayed, make the second one twice as wide. */
 		/*		 If 4 or more widgets are displayed, show three across when available. */
 	}
-	.f-widget .widget:only-of-type {
+	.f-widget .widget:only-of-type, page-widget .widget:only-of-type {
 		width: 100%;
 	}
-	.f-widget .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
+	.f-widget .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2), page-widget .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
 		-webkit-box-flex: 2;
 		    -ms-flex: 2;
 		        flex: 2;
 	}
 	.f-widget .widget:nth-last-child(n+4),
-	.f-widget .widget:nth-last-child(n+4) ~ .widget {
+	.f-widget .widget:nth-last-child(n+4) ~ .widget, page-widget .widget:nth-last-child(n+4),
+	page-widget .widget:nth-last-child(n+4) ~ .widget {
 		width: 30%;
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 1 30%;
@@ -2431,7 +2523,7 @@ aside#secondary {
 }
 
 /*
-
+}
 footer.site-footer.no-widgets{
    display: flex;
 		flex-wrap: wrap;
@@ -2620,6 +2712,46 @@ object {
 	.centered-image {
 		margin: 0 -2em;
 	}
+}
+
+/* SVG Icons base styles */
+.icon {
+	display: inline-block;
+	fill: currentColor;
+	height: .3em;
+	position: relative;
+	/* Align more nicely with capital letters */
+	top: -0.0625em;
+	vertical-align: middle;
+	width: 1em;
+}
+
+/*--------------------------------------------------------------
+SVG Fallbacks
+--------------------------------------------------------------*/
+.svg-fallback {
+	display: none;
+}
+
+.no-svg .svg-fallback {
+	display: inline-block;
+}
+
+/* Social Menu fallbacks */
+.no-svg .social-menu a {
+	height: auto;
+	width: auto;
+}
+
+.no-svg .social-menu li a .screen-reader-text {
+	clip: auto;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 400;
+	height: auto;
+	position: relative !important;
+	/* overrides previous !important styles */
+	width: auto;
 }
 
 /*# sourceMappingURL=../humescores/sass/maps/style.css.map */

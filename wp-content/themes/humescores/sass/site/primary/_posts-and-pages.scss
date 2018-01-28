@@ -89,7 +89,22 @@
     clear: both;
     margin: 0 0 1.5em;
 }
-
+.page-container{
+    display:flex;
+       @media screen and (max-width: $query__small) {
+		flex-direction:column-reverse;
+                
+	}
+}
+@media screen and (min-width: $query__small){
+    .page-main{
+        min-width:100%;
+    }
+}
+.page-main {
+     min-width:66%;
+    flex: 0 1 66%;
+}
 
 .no-sidebar {
 
