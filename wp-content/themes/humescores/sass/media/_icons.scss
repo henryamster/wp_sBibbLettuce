@@ -1,9 +1,12 @@
-/* SVG Icons base styles */
 
+/* SVG Icons base styles */
+.icon-arrow-right, .icon-arrow-left{
+    height: .3em;
+}
 .icon {
 	display: inline-block;
 	fill: currentColor;
-	height: .3em;
+	height: 1em;
 	position: relative; /* Align more nicely with capital letters */
 	top: -0.0625em;
 	vertical-align: middle;
@@ -29,7 +32,7 @@ SVG Fallbacks
 	width: auto;
 }
 
-.no-svg .social-menu li a .screen-reader-text {
+.no-svg ul#menu-social li a .screen-reader-text {
 	clip: auto;
 	font-size: 16px;
 	font-size: 1rem;
@@ -37,4 +40,13 @@ SVG Fallbacks
 	height: auto;
 	position: relative !important; /* overrides previous !important styles */
 	width: auto;
+}
+.no-svg .svg-fallback.icon-arrow-left:before {
+	content: "←";
+       
+}
+
+.no-svg .svg-fallback.icon-arrow-right:before {
+	content: "→";
+        
 }

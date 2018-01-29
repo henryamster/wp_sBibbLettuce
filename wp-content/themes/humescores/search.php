@@ -30,10 +30,11 @@ endif; ?>
 
 			the_posts_pagination(array(
                             'prev_text' => humescores_get_svg(array(
-                                'icon' => 'arrow-left'
+                                'icon' => 'arrow-left',  'fallback' => 'true'
                             )) .  __( 'Newer' ,'humescores'),
                              'next_text' => __( 'Older' ,'humescores') . humescores_get_svg(array(
-                                'icon' => 'arrow-right'
+                                'icon' => 'arrow-right',
+                                 'fallback' => 'true'
                             )) ,
                             'before_page_number ' => '<span class="screen-reader-text"> '.  __( 'Newer' ,'humescores') . '</span>',
                         ));

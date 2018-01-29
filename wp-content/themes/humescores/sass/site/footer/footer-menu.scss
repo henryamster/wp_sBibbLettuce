@@ -8,9 +8,9 @@ and open the template in the editor.
     Author     : henry
 */
 
-ul#secondary-menu{
+ul#menu-social{
     width:50%;
-    display: flex;;
+    display: flex;
     margin:0;
     padding:0;
     flex-direction: row;
@@ -27,7 +27,7 @@ li.menu-item {
 
 
 @media screen and (max-width: $query__med){
-    ul#secondary-menu{
+    ul#menu-social{
         padding-top:5px;
-        flex-direction: column;
+/*        flex-direction: column;*/
     }}

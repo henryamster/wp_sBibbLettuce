@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: BibLettuceTheme
 Theme URI: http://underscores.me/
@@ -1344,7 +1345,7 @@ and open the template in the editor.
     Created on : Jan 18, 2018, 1:31:41 PM
     Author     : henry
 */
-ul#secondary-menu {
+ul#menu-social {
 	width: 50%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1369,12 +1370,9 @@ li.menu-item {
 }
 
 @media screen and (max-width: 900px) {
-	ul#secondary-menu {
+	ul#menu-social {
 		padding-top: 5px;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
+		/*        flex-direction: column;*/
 	}
 }
 
@@ -2715,10 +2713,14 @@ object {
 }
 
 /* SVG Icons base styles */
+.icon-arrow-right, .icon-arrow-left {
+	height: .3em;
+}
+
 .icon {
 	display: inline-block;
 	fill: currentColor;
-	height: .3em;
+	height: 1em;
 	position: relative;
 	/* Align more nicely with capital letters */
 	top: -0.0625em;
@@ -2743,7 +2745,7 @@ SVG Fallbacks
 	width: auto;
 }
 
-.no-svg .social-menu li a .screen-reader-text {
+.no-svg ul#menu-social li a .screen-reader-text {
 	clip: auto;
 	font-size: 16px;
 	font-size: 1rem;
@@ -2752,6 +2754,14 @@ SVG Fallbacks
 	position: relative !important;
 	/* overrides previous !important styles */
 	width: auto;
+}
+
+.no-svg .svg-fallback.icon-arrow-left:before {
+	content: "←";
+}
+
+.no-svg .svg-fallback.icon-arrow-right:before {
+	content: "→";
 }
 
 /*# sourceMappingURL=../humescores/sass/maps/style.css.map */

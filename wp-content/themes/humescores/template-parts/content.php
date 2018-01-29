@@ -46,7 +46,14 @@
 //                                    wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'humescores' ), array( 'span' => array( 'class' => array() ) ) ),
 //                                    the_title( '<span class="screen-reader-text">"', '"</span>', false )
 //                            ) );
+                    
+                    $length_setting = get_theme_mod('length_setting');
+                    if('excerpt' === $length_setting){
                             the_excerpt();
+                    }
+                    else{
+                        the_content();
+                    }
 //                            wp_link_pages( array(
 //                                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'humescores' ),
 //                                    'after'  => '</div>',

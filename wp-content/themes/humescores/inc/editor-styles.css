@@ -1,0 +1,361 @@
+/*
+Theme: Mr. Bibb Lettuce's Theme
+
+*/
+html{
+    padding: 0 2em;
+  
+}
+body{
+      max-width:1080px;
+      margin: 0 auto;
+      color:black;
+      color: #404040;
+	font-family: "Quattrocento", Georgia, Cambria, "Times New Roman", serif;
+	font-size: 18px;
+	font-size: 0.9 1.25rem;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	/*        header font*/
+	font-family: "Quattrocento", Georgia, Cambria, "Times New Roman", serif;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2.655em;
+}
+
+h3 {
+	font-size: 2.338em;
+}
+
+h4 {
+	font-size: 1.989em;
+}
+
+h5 {
+	font-size: 1.655em;
+}
+
+h6 {
+	font-size: 1.2em;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 18.75px;
+	font-size: 0.9375 1.25rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 18.75px;
+	font-size: 0.9375 1.25rem;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #ccffcc;
+	/* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+figure {
+	margin: 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	color: #ff9999;
+}
+
+a:visited {
+	color: #ff6633;
+}
+
+a:hover, a:focus, a:active {
+	color: #9F9881;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
+.page-content a,
+.entry-content a,
+.entry-summary a,
+.comment-content a {
+	text-decoration: none;
+	border-bottom: 2px dotted #ffffcc;
+}
+
+.page-content a:focus, .page-content a:hover,
+.entry-content a:focus,
+.entry-content a:hover,
+.entry-summary a:focus,
+.entry-summary a:hover,
+.comment-content a:focus,
+.comment-content a:hover {
+	color: #ffffcc;
+	border-bottom: 2px solid #ffcccc;
+}
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	font-family: "Cormorant Garamond", Helvetica, serif;
+	margin-bottom: 2em;
+	max-width: 100%;
+	font-size: 85%;
+	color: #ffcccc;
+	text-align: center;
+	font-style: italic;
+}
+
+.wp-caption a {
+	color: inherit;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: .5em 0 1.5em 1em;
+}
+
+.wp-caption .wp-caption-text::first-letter {
+	font-weight: 700;
+	font-size: 120%;
+}
+
+@media screen and (min-width: 600px) {
+	.wp-caption .wp-caption-text {
+		margin-left: 2em;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.wp-caption .wp-caption-text {
+		margin-left: 0;
+	}
+}
+
+
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin: 1.5em 0;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+	padding: 1em;
+}
+
+.gallery-item img {
+	display: block;
+}
+
+.gallery-item a {
+	display: inline-block;
+	border-bottom: none;
+}
+
+.gallery-item a:hover, .gallery-item a:focus {
+	border-bottom: none;
+	box-shadow: none;
+}
+
+.gallery-item a:hover img, .gallery-item a:focus img {
+	border-color: #ffffcc;
+}
+
+.gallery-item a img {
+	padding: .5em;
+	margin: 0 auto;
+	border: 1px solid #fff;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+	margin: 0;
+	font-family: "Cormorant Garamond", Helvetica, serif;
+	border: none;
+}
+
+.wp-caption.aligncenter,
+.centered-image {
+	max-width: 100vw;
+	margin: 0 -1em;
+}
+
+@media screen and (min-width: 600px) {
+	.wp-caption.aligncenter,
+	.centered-image {
+		margin: 0 -2em;
+	}
+}
+
+/* SVG Icons base styles */
+.icon-arrow-right, .icon-arrow-left {
+	height: .3em;
+}
+
+.icon {
+	display: inline-block;
+	fill: currentColor;
+	height: 1em;
+	position: relative;
+	/* Align more nicely with capital letters */
+	top: -0.0625em;
+	vertical-align: middle;
+	width: 1em;
+}
